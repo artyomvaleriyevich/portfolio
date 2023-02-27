@@ -1,0 +1,68 @@
+.form{
+  width: 600px;
+  background: #282C33;
+  border-radius: 20px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+  position: relative;
+  &__title{
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 42px;
+    color: #FFFFFF;
+  }
+  &__info{
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+  }
+  &__label{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    color: #ABB2BF;
+    row-gap: 10px;
+    input{
+      background: transparent;
+      width: 100%;
+      outline: none;
+      border: 1px solid grey;
+      padding: 8px;
+      color: #ABB2BF;
+    }
+  }
+  &__message{
+    resize: none;
+    background: transparent;
+    padding: 8px;
+    outline: none;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    color: #ABB2BF;
+    height: 200px;
+  }
+  &__btn{
+    display: block;
+    padding: 8px 16px;
+    width: 30%;
+  }
+  &__closeBtn{
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    svg{
+      font-size: 40px;
+      color: #ABB2BF;
+      &:hover{
+        color: red;
+      }
+      cursor: pointer;
+    }
+  }
+}

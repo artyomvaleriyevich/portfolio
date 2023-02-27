@@ -1,0 +1,329 @@
+.home{
+  overflow: hidden;
+}
+.me{
+  padding: 60px 0;
+  position: relative;
+  &:before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(50%,0);
+    width: 155px;
+    height: 155px;
+    background: transparent;
+    border: 1px solid grey;
+  }
+  &__row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__info{
+    display: flex;
+    flex-direction: column;
+    row-gap: 32px;
+  }
+  &__title{
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 42px;
+    color: #FFFFFF;
+    &-span{
+      color: #C778DD;
+    }
+  }
+  &__subtitle{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25px;
+    color: #ABB2BF;
+  }
+  &__btn{
+    padding: 8px 0;
+    display: block;
+    width: 220px;
+    white-space: nowrap;
+  }
+  &__blockImg{
+    width: 50%;
+  }
+  &__img{
+    width: 100%;
+  }
+  &__portfolio{
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    border: 1px solid grey;
+    padding: 8px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    color: #ABB2BF;
+    &-span{
+      color: white;
+    }
+    &-box{
+      width: 16px;
+      height: 16px;
+      background: #C778DD;
+    }
+  }
+  &__quoteBlock{
+    margin: 100px auto 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 31px;
+    color: #FFFFFF;
+    &-quote{
+      padding: 32px;
+      border: 1px solid grey;
+      position: relative;
+      &::before{
+        content: '';
+        position: absolute;
+        width: 42px;
+        height: 29px;
+        top: -10px;
+        left: 20px;
+        z-index: 100;
+        background: url("../../assets/images/home/me/quote.png") ;
+      }
+      &::after{
+        content: '';
+        position: absolute;
+        width: 42px;
+        height: 29px;
+        bottom: -10px;
+        right: 20px;
+        z-index: 100;
+        background: url("../../assets/images/home/me/quote.png") ;
+      }
+    }
+    &-name{
+      padding: 32px;
+      border: 1px solid grey;
+      width: 30%;
+      text-align: right;
+    }
+
+  }
+
+}
+.project{
+  margin-bottom: 100px;
+  position: relative;
+  &:before{
+    content: '';
+    position: absolute;
+    background: url("./src/assets/images/home/dots.png");
+    width: 84px;
+    height: 84px;
+    top: 0;
+    left: 0;
+    transform: translate(-60%,50%);
+  }
+  &:after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(50%,0);
+    width: 155px;
+    height: 155px;
+    background: transparent;
+    border: 1px solid grey;
+  }
+  &__row{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__card{
+    width: calc(33.33333% - 16px);
+    border: 1px solid grey;
+    height: 100%;
+    &-img{
+      width: 100%;
+    }
+    &-description{
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 21px;
+      color: #ABB2BF;
+      padding: 8px;
+      border-bottom: 1px solid grey;
+    }
+    &-box{
+      padding: 16px;
+    }
+    &-title{
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 31px;
+      color: #FFFFFF;
+    }
+    &-subtitle{
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 21px;
+      color: #ABB2BF;
+      margin: 16px 0;
+    }
+    &-btn{
+      padding: 8px 16px;
+    }
+  }
+  &__btn{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    color: #FFFFFF;
+    &:hover{
+      color: #C778DD;
+    }
+  }
+}
+.skill{
+  margin-bottom: 100px;
+  &__content{
+    margin-top: 20px;
+  }
+  &__content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__block{
+    width: 40%;
+    img{
+      width: 100%;
+    }
+  }
+  &__row{
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 16px;
+  }
+  &__card{
+    width: calc(33.33333% - 16px);
+    border: 1px solid grey;
+    height: 100%;
+    &-title{
+      padding: 8px;
+      border-bottom: 1px solid grey;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 21px;
+      color: #FFFFFF;
+    }
+    &-subtitle{
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 21px;
+      color: #ABB2BF;
+      padding: 8px;
+    }
+  }
+}
+.aboutMe{
+  margin-bottom: 100px;
+  position: relative;
+  &:before{
+    content: '';
+    position: absolute;
+    top: 30%;
+    left: 0;
+    transform: translate(-50%,-50%);
+    width: 155px;
+    height: 155px;
+    background: transparent;
+    border: 1px solid grey;
+  }
+  &:after{
+    content: '';
+    position: absolute;
+    background: url("./src/assets/images/home/dots.png");
+    top: 60%;
+    right: 0;
+    transform: translate(20%,0);
+    width: 84px;
+    height: 84px;
+
+  }
+
+  &__row{
+    display: flex;
+    justify-content: space-between;
+    column-gap: 170px;
+  }
+  &__text{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: #ABB2BF;
+    margin: 30px 0;
+  }
+  &__btn{
+    padding: 8px 16px;
+  }
+}
+.contactMe{
+  margin-bottom: 100px;
+  position: relative;
+  &:before{
+    content: '';
+    position: absolute;
+    background: url("./src/assets/images/home/dots.png");
+    top: 50%;
+    left: 0;
+    transform: translate(-40%,0);
+    width: 84px;
+    height: 84px;
+  }
+  &__text{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    color: #ABB2BF;
+  }
+  &__row{
+    display: flex;
+    justify-content: space-between;
+    column-gap:300px;
+    margin-top: 45px;
+  }
+  &__block{
+    border: 1px solid grey;
+    padding: 16px;
+    background: transparent;
+  }
+  &__message{
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 21px;
+    color: #FFFFFF;
+    white-space: nowrap;
+  }
+  &__social{
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    color: #ABB2BF;
+    margin-top: 10px;
+    svg{
+      font-size: 20px;
+    }
+  }
+}

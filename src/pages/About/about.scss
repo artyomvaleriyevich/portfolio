@@ -1,0 +1,107 @@
+.about{
+  overflow: hidden;
+  position: relative;
+  &:before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(50%,0);
+    width: 155px;
+    height: 155px;
+    background: transparent;
+    border: 1px solid grey;
+  }
+  &:after{
+    content: '';
+    position: absolute;
+    background: url("./src/assets/images/home/dots.png");
+    top: 30%;
+    left: 0;
+    transform: translate(20%,0);
+    width: 84px;
+    height: 84px;
+
+  }
+  &__text{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25px;
+    color: #ABB2BF;
+  }
+  &__row{
+    display: flex;
+    align-items: center;
+    column-gap: 150px;
+    justify-content: space-between;
+    margin-bottom: 80px;
+  }
+  &__skills{
+    display: flex;
+    column-gap: 16px;
+    justify-content: center;
+    margin-bottom: 80px;
+  }
+  &__card{
+    border: 1px solid grey;
+    height: 100%;
+    text-align: center;
+    &-title{
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 21px;
+      color: #FFFFFF;
+      border-bottom: 1px solid grey;
+      padding: 8px;
+    }
+    &-subtitle{
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 21px;
+      color: #ABB2BF;
+      padding: 8px;
+    }
+  }
+  &__facts{
+    margin-bottom: 80px;
+    display: flex;
+    column-gap: 50px;
+    justify-content: space-between;
+    &-block{
+      height: 100%;
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    position: relative;
+    &:before{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -30%;
+      width: 155px;
+      height: 155px;
+      background: transparent;
+      border: 1px solid grey;
+    }
+    &:after{
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: -25%;
+      background: url("./src/assets/images/home/dots.png");
+      width: 84px;
+      height: 84px;
+    }
+  }
+  &__fact{
+    padding: 8px;
+    border: 1px solid grey;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    color: #ABB2BF;
+  }
+
+}
