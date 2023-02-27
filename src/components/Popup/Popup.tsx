@@ -14,7 +14,7 @@ const Popup = () => {
 
     return (
         <div style={{display: status ? 'flex': 'none'}} className={'overlay'}>
-            <form className="form" action="https://formsubmit.co/933b84e68c1738092f158c72b2b04cf0" method="post">
+            <form className="form" action="https://formspree.io/f/myyajzny" method="post">
                 <h2 className="form__title">Заявка на Сообщение</h2>
                 <div className="form__info">
                     <label className="form__label">
@@ -32,7 +32,6 @@ const Popup = () => {
                     <textarea placeholder={'Ваше сообщение...'} maxLength={400} minLength={10} name="message" className="form__message"></textarea>
                 </label>
 
-                <input type="hidden" name="_captcha" value="false"/>
                 <button className="form__btn purpleBtn" type={'submit'}>Отправить</button>
 
                 <span onClick={()=>dispatch(closePopup())} className="form__closeBtn"><IoClose/></span>
