@@ -14,7 +14,7 @@ const Popup = () => {
 
     return (
         <div style={{display: status ? 'flex': 'none'}} className={'overlay'}>
-            <form className="form" action="https://formsubmit.co/artyom.valeriyevich@gmail.com" method="POST">
+            <form className="form" action="https://formsubmit.co/933b84e68c1738092f158c72b2b04cf0" method="post">
                 <h2 className="form__title">Заявка на Сообщение</h2>
                 <div className="form__info">
                     <label className="form__label">
