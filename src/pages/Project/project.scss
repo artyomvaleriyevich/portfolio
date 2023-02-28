@@ -15,6 +15,7 @@
     margin-bottom: 80px ;
   }
   &__card{
+    padding-bottom: 8px;
     width: calc(33.33333% - 10.66666px);
     height: 100%;
     border: 1px solid grey;
@@ -49,6 +50,5 @@
     &-btn{
       padding: 8px 16px;
     }
-
   }
 }

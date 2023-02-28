@@ -9,6 +9,9 @@ import {AiOutlineInstagram,AiOutlineWhatsApp} from "react-icons/ai";
 import {FaTelegramPlane} from "react-icons/fa";
 import {useAppDispatch} from "../../store";
 import {openPopup} from "../../redux/popupSlice";
+import todoJs from "../../assets/images/projects/todoJs.png";
+import simple from "../../assets/images/projects/simple.png";
+import food from "../../assets/images/projects/food.png";
 
 const Home = () => {
 
@@ -45,34 +48,37 @@ const Home = () => {
                     <SectionTitle title={'проекты'}/>
                     <div className="project__row">
 
-                        <div className="project__card">
-                            <img src={imgCard} alt="" className="project__card-img"/>
-                            <p className="project__card-description">HTML SCSS React Python</p>
-                            <div className="project__card-box">
-                                <h3 className="project__card-title">ChertNodes</h3>
-                                <p className="project__card-subtitle">Minecraft servers hosting </p>
-                                <button className="project__card-btn purpleBtn">{`Live <~>`}</button>
+                        <div className="projects__card">
+                            <img src={todoJs} alt="" className="projects__card-img"/>
+                            <p className="projects__card-stack">Html Scss JavaScript Vanta</p>
+                            <div className="projects__card-description">
+                                <h3 className="projects__card-title">Todo List</h3>
+                                <p className="projects__card-info">Список дел</p>
+
+                                <Link target={'_blank'} to={'https://github.com/artyomvaleriyevich/todoJs'} className="projects__card-btn purpleBtn">{`Github <~>`}</Link>
                             </div>
                         </div>
 
 
-                        <div className="project__card">
-                            <img src={imgCard} alt="" className="project__card-img"/>
-                            <p className="project__card-description">HTML SCSS React Python HTML SCSS React Python</p>
-                            <div className="project__card-box">
-                                <h3 className="project__card-title">ProtectX</h3>
-                                <p className="project__card-subtitle">Discord anti-crash bot</p>
-                                <button className="project__card-btn purpleBtn">{`Live <~>`}</button>
+                        <div className="projects__card">
+                            <img src={simple} alt="" className="projects__card-img"/>
+                            <p className="projects__card-stack">Html Scss React Redux Redux-toolkit TypeScript Vite Axios db.json</p>
+                            <div className="projects__card-description">
+                                <h3 className="projects__card-title">Simple Design</h3>
+                                <p className="projects__card-info">Интернет магазин по проектирование комнат</p>
+
+                                <Link target={'_blank'} to={'https://github.com/artyomvaleriyevich/simpleVite'} className="projects__card-btn purpleBtn">{`Github <~>`}</Link>
                             </div>
                         </div>
 
-                        <div className="project__card">
-                            <img src={imgCard} alt="" className="project__card-img"/>
-                            <p className="project__card-description">HTML SCSS React Python</p>
-                            <div className="project__card-box">
-                                <h3 className="project__card-title">Kahoot Answers Viewer</h3>
-                                <p className="project__card-subtitle">Get answers to your kahoot quiz</p>
-                                <button className="project__card-btn purpleBtn">{`Live <~>`}</button>
+                        <div className="projects__card">
+                            <img src={food} alt="" className="projects__card-img"/>
+                            <p className="projects__card-stack">Html Scss React Redux Redux-toolkit db.json Axios Swiper Toastify</p>
+                            <div className="projects__card-description">
+                                <h3 className="projects__card-title">Food</h3>
+                                <p className="projects__card-info">Добавки для улучшение здоровья</p>
+
+                                <Link target={'_blank'} to={'https://github.com/artyomvaleriyevich/Food'} className="projects__card-btn purpleBtn">{`Github <~>`}</Link>
                             </div>
                         </div>
 
