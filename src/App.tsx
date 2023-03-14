@@ -1,6 +1,8 @@
 import { Route, Routes } from "react-router-dom"
 import { Layout } from "./pages/Layout/Layout"
+import './media.scss'
 import './styles.scss'
+
 import Home from "./pages/Home/Home";
 import Contact from "./pages/Contact/Contact";
 import About from "./pages/About/About";

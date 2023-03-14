@@ -1,11 +1,11 @@
+
 import './home.scss'
 import human from '../../assets/images/home/me/human.png'
 import SectionTitle from "../../components/SectionTitle/SectionTitle";
-import imgCard from '../../assets/images/home/project/project.png'
 import imgSkill from '../../assets/images/home/skill/dots.png'
 import imgHuman from '../../assets/images/home/aboutMe/human.png'
 import {Link} from "react-router-dom";
-import {AiOutlineInstagram,AiOutlineWhatsApp} from "react-icons/ai";
+import {AiOutlineInstagram} from "react-icons/ai";
 import {FaTelegramPlane} from "react-icons/fa";
 import {useAppDispatch} from "../../store";
 import {openPopup} from "../../redux/popupSlice";
@@ -38,7 +38,7 @@ const Home = () => {
                     </div>
 
                     <div className="me__quoteBlock">
-                        <p className={'me__quoteBlock-quote'}>Человек может быть гением или обладать всеми необходимыми навыками, но если он не верит в себя, он не будет выкладываться по полной.</p>
+                        <p className={'me__quoteBlock-quote'}>" Человек может быть гением или обладать всеми необходимыми навыками, но если он не верит в себя, он не будет выкладываться по полной. "</p>
                         <p className={'me__quoteBlock-name'}>- Марк Цукерберг</p>
                     </div>
                 </div>
@@ -48,7 +48,7 @@ const Home = () => {
                     <SectionTitle title={'проекты'}/>
                     <div className="project__row">
 
-                        <div className="projects__card">
+                        <div className="project__card">
                             <img src={todoJs} alt="" className="projects__card-img"/>
                             <p className="projects__card-stack">Html Scss JavaScript Vanta</p>
                             <div className="projects__card-description">
@@ -60,9 +60,11 @@ const Home = () => {
                         </div>
 
 
-                        <div className="projects__card">
+                        <div className="project__card">
                             <img src={simple} alt="" className="projects__card-img"/>
-                            <p className="projects__card-stack">Html Scss React Redux Redux-toolkit TypeScript Vite Axios db.json</p>
+                            <p className="projects__card-stack">Html Scss React Redux Redux-toolkit TypeScript Vite Axios db.json
+                            json-server
+                            </p>
                             <div className="projects__card-description">
                                 <h3 className="projects__card-title">Simple Design</h3>
                                 <p className="projects__card-info">Интернет магазин по проектирование комнат</p>
@@ -71,9 +73,9 @@ const Home = () => {
                             </div>
                         </div>
 
-                        <div className="projects__card">
+                        <div className="project__card">
                             <img src={food} alt="" className="projects__card-img"/>
-                            <p className="projects__card-stack">Html Scss React Redux Redux-toolkit db.json Axios Swiper Toastify</p>
+                            <p className="projects__card-stack">Html Scss React Redux Redux-toolkit db.json Axios Swiper Toastify json-server</p>
                             <div className="projects__card-description">
                                 <h3 className="projects__card-title">Food</h3>
                                 <p className="projects__card-info">Добавки для улучшение здоровья</p>
@@ -156,9 +158,8 @@ const Home = () => {
                         <p className="contactMe__text">Eсли, у вас есть работа для меня или вопрос, не стесняйтесь обращаться ко мне.</p>
                         <div className="contactMe__block">
                             <h3 className="contactMe__message">Напишите мне сюда</h3>
-                            <p className="contactMe__social"><AiOutlineInstagram/> @popoudin.spz</p>
-                            <p className="contactMe__social"><AiOutlineWhatsApp/> +996555362034</p>
-                            <p className="contactMe__social"><FaTelegramPlane/> @artyom__spz</p>
+                            <a href={'https://www.instagram.com/popoudin.spz/'} className="contactMe__social contactMe__social-instagram"><AiOutlineInstagram/> @popoudin.spz</a>
+                            <a href={'https://t.me/artyom_spz'} className="contactMe__social contactMe__social-telegram"><FaTelegramPlane/> @artyom__spz</a>
                         </div>
                     </div>
                 </div>

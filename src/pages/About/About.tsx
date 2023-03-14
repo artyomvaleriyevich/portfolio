@@ -61,7 +61,7 @@ const About = () => {
                         <p className="about__fact">Я амбиверт. Это люди, тип личности которых находится посередине между интровертами и экстравертами.</p>
                         <p className="about__fact">Люблю кататься на лыжах</p>
                         <p className="about__fact">Занимаюсь спортом</p>
-                        <p className="about__fact">Очень люблю катать по ночному городу</p>
+                        <p className="about__fact">Очень люблю ездить по ночному городу</p>
                         <p className="about__fact">Обожаю слушать музыку во время работы</p>
                     </div>
                     

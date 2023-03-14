@@ -16,3 +16,9 @@
     height: 1px;
   }
 }
+
+@media (max-width: 376px) {
+  .sectionTitle__title {
+    font-size: 24px;
+  }
+}

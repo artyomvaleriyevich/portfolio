@@ -21,14 +21,22 @@ export const Header = () => {
                         <NavLink className={'header__link'} to={'/about'}><span className="net">#</span>обо мне</NavLink>
                         <NavLink className={'header__link'} to={'/contact'}><span className="net">#</span>контакты</NavLink>
                     </ul>
+
+                    <div className="burger">
+                        <NavLink className={'burger__link'} to={'/'}><span className="net">#</span>главная</NavLink>
+                        <NavLink className={'burger__link'} to={'/project'}><span className="net">#</span>проекты</NavLink>
+                        <NavLink className={'burger__link'} to={'/about'}><span className="net">#</span>обо мне</NavLink>
+                        <NavLink className={'burger__link'} to={'/contact'}><span className="net">#</span>контакты</NavLink>
+                        <button type={'button'} className="burger__close">X</button>
+                    </div>
                 </div>
             </div>
 
             <div className="header__menu">
                 <span className="header__line"></span>
-                <Link className={'header__social'} to={'https://github.com/artyomvaleriyevich'}><AiFillGithub/></Link>
-                <Link className={'header__social'} to={'https://www.instagram.com/popoudin.spz/'}><AiOutlineInstagram/></Link>
-                <Link className={'header__social'} to={'https://t.me/artyom_spz'}><FaTelegramPlane/></Link>
+                <Link className={'header__social header__social-git'} to={'https://github.com/artyomvaleriyevich'}><AiFillGithub/></Link>
+                <Link className={'header__social header__social-instagram'} to={'https://www.instagram.com/popoudin.spz/'}><AiOutlineInstagram/></Link>
+                <Link className={'header__social header__social-telegram'} to={'https://t.me/artyom_spz'}><FaTelegramPlane/></Link>
             </div>
 
         </header>

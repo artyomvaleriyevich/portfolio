@@ -9,7 +9,7 @@
     font-style: normal;
 }
 body{
-    background: #282C33;
+    background: #201e20;
 }
 .container{
     max-width: 1044px;
@@ -21,23 +21,22 @@ body{
     border-radius: 5px;
     border: 1px solid #C778DD;
     background: transparent;
-    transition: 2s;
     cursor: pointer;
 
     font-weight: 500;
     font-size: 16px;
     line-height: 21px;
     color: #FFFFFF;
+    transition: 1s;
     &:hover{
-        background: linear-gradient(0deg, #C778DD, #C778DD),
-        linear-gradient(0deg, rgba(199, 120, 221, 0.2), rgba(199, 120, 221, 0.2));
-        transition: 2s;
+        transition: 1s;
+        background: #C778DD;
     }
 }
+
 .net{
     color: #C778DD;
 }
-
 .overlay{
     width: 100%;
     height: 100vh;
@@ -50,3 +49,9 @@ body{
     left: 0;
     z-index: 2000;
 }
+
+
+
+
+
+
