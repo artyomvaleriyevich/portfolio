@@ -430,3 +430,19 @@
     width: 45%;
   }
 }
+@media (max-width: 321px) {
+  .me__quoteBlock-name {
+    width: 65%;
+  }
+  .skill__card {
+    width: 100%;
+  }
+  .contactMe__block{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer__by{
+    font-size: 13px;
+  }
+}
