@@ -455,6 +455,7 @@
 @media (max-width: 321px) {
   .me__quoteBlock-name {
     width: 100%;
+    white-space: nowrap;
   }
   .skill__card {
     width: 100%;
