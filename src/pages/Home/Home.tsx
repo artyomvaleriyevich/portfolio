@@ -12,6 +12,7 @@ import {openPopup} from "../../redux/popupSlice";
 import todoJs from "../../assets/images/projects/todoJs.png";
 import simple from "../../assets/images/projects/simple.png";
 import food from "../../assets/images/projects/food.png";
+import { animateScroll as scroll} from 'react-scroll'
 
 const Home = () => {
 
@@ -86,7 +87,7 @@ const Home = () => {
 
                     </div>
 
-                    <Link className={'project__btn'} to={'project'}>{`Все мои проекты ~~>`}</Link>
+                    <Link  onClick={()=> scroll.scrollToTop()} className={'project__btn'} to={'project'}>{`Все мои проекты ~~>`}</Link>
                 </div>
             </section>
             <section className="skill">
@@ -142,7 +143,7 @@ const Home = () => {
                                Я помогаю различным клиентам установить свое присутствие в Интернете. Всегда стараюсь узнавать о новейших технологиях и фреймворках.
                            </p>
 
-                           <Link to={'/about'} className="purpleBtn aboutMe__btn">{`Читать дальше ->`}</Link>
+                           <Link onClick={()=> scroll.scrollToTop()} to={'/about'} className="purpleBtn aboutMe__btn">{`Читать дальше ->`}</Link>
                        </div>
                         
                         <div className="aboutMe__picture">
