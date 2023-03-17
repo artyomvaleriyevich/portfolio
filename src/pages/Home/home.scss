@@ -328,6 +328,15 @@
   }
 }
 
+@media (max-width: 1025px) {
+  .me__quoteBlock{
+    font-size: 21px ;
+  }
+  .me__portfolio{
+     font-size: 13px;
+   }
+}
+
 @media (max-width: 769px) {
   .me__title{
     font-size: 26px;
@@ -370,14 +379,16 @@
   .me__row{
     row-gap: 30px;
     flex-direction: column;
-    padding: 0 32px;
     justify-content: center;
   }
   .me__info{
     align-items: center;
   }
   .me__blockImg {
-    width: 100%;
+    width: 270px;
+  }
+  .me__quoteBlock{
+    font-size: 15px ;
   }
   .sectionTitle__title{
     font-size: 25px;
@@ -455,5 +466,11 @@
   }
   .footer__by{
     font-size: 13px;
+  }
+  .me__quoteBlock{
+    font-size: 14px;
+  }
+  .aboutMe__row{
+    row-gap: 20px;
   }
 }

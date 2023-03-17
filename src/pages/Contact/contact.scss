@@ -67,11 +67,6 @@
   }
 }
 
-@media (max-width: 1025px) {
-  .contact__row{
-    margin: 30px 50px 100px;
-  }
-}
 
 @media (max-width: 769px) {
   .contact:before{
@@ -89,5 +84,13 @@
   }
   .contact__socials{
     justify-content: space-between;
+  }
+}
+
+@media (max-width: 376px) {
+  .contact__socials{
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 10px;
   }
 }

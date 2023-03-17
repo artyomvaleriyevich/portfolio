@@ -113,9 +113,7 @@
 }
 
 @media (max-width: 1025px) {
-  .about__row{
-    padding: 0 60px;
-  }
+
   .about:after{
     top: 36%;
   }
@@ -124,9 +122,6 @@
   }
 }
 @media (max-width: 769px) {
-  .about__picture{
-    width: 900px;
-  }
   .about__row{
     column-gap: 100px;
   }
@@ -142,7 +137,6 @@
   .about__row{
     margin-top: 20px;
     flex-direction: column;
-    padding: 0 35px;
   }
 
   .about__picture{
@@ -161,17 +155,10 @@
   .about__facts:before, .about:before, .about__facts:after{
     display: none;
   }
-  .about__row {
-
-  }
 }
 
 @media (max-width: 376px) {
   .about:before{
     display: none;
   }
-  .about__row {
-    padding: 0 30px;
-  }
-
 }
