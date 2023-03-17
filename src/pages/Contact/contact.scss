@@ -66,3 +66,28 @@
     }
   }
 }
+
+@media (max-width: 1025px) {
+  .contact__row{
+    margin: 30px 50px 100px;
+  }
+}
+
+@media (max-width: 769px) {
+  .contact:before{
+    top: 80%;
+  }
+}
+
+@media (max-width: 426px) {
+  .contact__row{
+    flex-direction: column;
+    row-gap: 30px;
+  }
+  .contact:before, .contact__socials:before{
+    display: none;
+  }
+  .contact__socials{
+    justify-content: space-between;
+  }
+}

@@ -52,3 +52,52 @@
     }
   }
 }
+
+
+@media (max-width: 1025px) {
+  .me__portfolio{
+    font-size: 13px;
+  }
+  .me__quoteBlock{
+    font-size: 21px ;
+  }
+}
+
+@media (max-width: 769px) {
+  .projects__card-title{
+    font-size: 22px;
+  }
+  .projects__card-info{
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 426px) {
+  .netTitle{
+    white-space: nowrap;
+  }
+  .projects__row{
+    flex-direction: column;
+    row-gap: 20px ;
+  }
+  .projects__card{
+    width: 100%;
+  }
+  .netTitle {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 376px) {
+  .netTitle {
+    font-size: 23px;
+  }
+}
+@media (max-width: 321px) {
+  .netTitle {
+    font-size:19px;
+  }
+  .netTitle__span{
+    font-size: 19px;
+  }
+}
