@@ -13,6 +13,7 @@ export const Header = () => {
 
     const {status} = useSelector((s:RootState) => s.burger)
     const dispatch = useAppDispatch()
+
     return (
         <header className="header">
             <div className="container">
@@ -23,10 +24,10 @@ export const Header = () => {
                     </p>
 
                     <ul className={`header__pages ${status && "active"}`}>
-                        <NavLink className={'header__link'} to={'/'}><span className="net">#</span>главная</NavLink>
-                        <NavLink className={'header__link'} to={'/project'}><span className="net">#</span>проекты</NavLink>
-                        <NavLink className={'header__link'} to={'/about'}><span className="net">#</span>обо мне</NavLink>
-                        <NavLink className={'header__link'} to={'/contact'}><span className="net">#</span>контакты</NavLink>
+                        <NavLink onClick={()=> dispatch(closeBurger())} className={'header__link'} to={'/'}><span className="net">#</span>главная</NavLink>
+                        <NavLink onClick={()=> dispatch(closeBurger())} className={'header__link'} to={'/project'}><span className="net">#</span>проекты</NavLink>
+                        <NavLink onClick={()=> dispatch(closeBurger())} className={'header__link'} to={'/about'}><span className="net">#</span>обо мне</NavLink>
+                        <NavLink onClick={()=> dispatch(closeBurger())} className={'header__link'} to={'/contact'}><span className="net">#</span>контакты</NavLink>
 
                         <button type={"button"} onClick={()=> dispatch(closeBurger())} className="header__close"><MdCloseFullscreen/></button>
                     </ul>
