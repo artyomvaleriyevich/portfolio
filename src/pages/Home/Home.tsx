@@ -1,4 +1,4 @@
-
+import { motion } from 'framer-motion'
 import './home.scss'
 import human from '../../assets/images/home/me/human.png'
 import SectionTitle from "../../components/SectionTitle/SectionTitle";
@@ -16,6 +16,15 @@ import { animateScroll as scroll} from 'react-scroll'
 
 const Home = () => {
 
+
+    const meBlockVariants = {
+        hidden:{
+            x:-1000
+        },
+        visible:{
+            x:0
+        }
+    }
     const dispatch = useAppDispatch()
 
     return (
@@ -23,19 +32,38 @@ const Home = () => {
             <section className="me">
                 <div className="container">
                     <div className="me__row">
-                        <div className="me__info">
+                        <motion.div
+                            className="me__info"
+                            initial={'hidden'}
+                            animate={'visible'}
+                            transition={{
+                                duration:1.5
+                            }}
+                            variants={meBlockVariants}
+                        >
                             <p className="me__title">Артемий — <span className="me__title-span">front-end разработчик</span></p>
                             <p className="me__subtitle">Он создает веб-сайты, где технологии сочетаются с творчеством.</p>
                             <button onClick={()=> dispatch(openPopup())} type={'button'} className="purpleBtn me__btn">Свяжитесь со мной!!</button>
-                        </div>
+                        </motion.div>
 
-                        <div className="me__blockImg">
+                        <motion.div
+                            className="me__blockImg"
+                            initial={{
+                                x:1000,
+                        }}
+                            animate={{
+                                x:0,
+                        }}
+                            transition={{
+                                duration:1.5
+                            }}
+                        >
                             <img src={human} alt="human" className="me__img"/>
                             <p className="me__portfolio">
                                 <span className="me__portfolio-box"></span>
                                 Сейчас работает над <span className="me__portfolio-span">портфолио</span>
                             </p>
-                        </div>
+                        </motion.div>
                     </div>
 
                     <div className="me__quoteBlock">
