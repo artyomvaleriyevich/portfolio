@@ -133,6 +133,12 @@
   }
 }
 
+@media (max-width: 668px) {
+  .about__skills{
+    display: block;
+  }
+}
+
 @media (max-width: 426px) {
   .about__row{
     margin-top: 20px;

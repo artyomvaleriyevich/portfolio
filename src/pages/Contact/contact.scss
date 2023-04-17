@@ -74,6 +74,12 @@
   }
 }
 
+@media (max-width: 668px) {
+  .contact__row{
+    column-gap: 50px;
+  }
+}
+
 @media (max-width: 426px) {
   .contact__row{
     flex-direction: column;

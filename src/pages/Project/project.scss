@@ -63,6 +63,17 @@
   }
 }
 
+@media (max-width: 668px) {
+  .projects__row{
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+  }
+  .projects__card{
+    width: 100%;
+  }
+}
+
 @media (max-width: 426px) {
   .netTitle{
     white-space: nowrap;

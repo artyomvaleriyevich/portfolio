@@ -366,6 +366,55 @@
     font-size: 21px;
   }
 
+
+}
+@media (max-width: 668px) {
+  .me__row{
+    flex-direction: column;
+    text-align: center;
+  }
+  .me__info{
+    align-items: center;
+    margin-bottom: 40px;
+  }
+  .skill__content{
+    flex-direction: column-reverse;
+  }
+  .skill__row{
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .aboutMe__row{
+    column-gap: 10px;
+  }
+  .footer__social-title {
+    font-size: 13px;
+  }
+  .project__row{
+    flex-direction: column;
+    row-gap: 30px;
+  }
+  .project__card{
+    width: 100%;
+  }
+
+}
+
+@media (max-width: 577px) {
+  .header__pages{
+    display: none;
+  }
+
+}
+
+@media (max-width: 500px) {
+  .skill__row{
+    flex-direction: column;
+    row-gap: 20px;
+  }
+  .skill__card{
+    width: 100%;
+  }
 }
 
 @media (max-width: 426px) {

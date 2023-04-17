@@ -70,3 +70,18 @@
     }
   }
 }
+
+@media (max-width: 577px) {
+  .footer__row{
+    flex-direction: column;
+  }
+  .footer__email{
+    align-items: center;
+    row-gap: 20px;
+    flex-direction: column;
+  }
+  .footer__title{
+    align-items: center;
+    margin-bottom: 20px;
+  }
+}
