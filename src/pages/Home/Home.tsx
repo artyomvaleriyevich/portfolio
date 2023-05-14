@@ -14,17 +14,88 @@ import simple from "../../assets/images/projects/simple.png";
 import food from "../../assets/images/projects/food.png";
 import { animateScroll as scroll} from 'react-scroll'
 
+
+
 const Home = () => {
 
 
-    const meBlockVariants = {
+    const meTextAnimation = {
         hidden:{
-            x:-1000
+            opacity: 0,
+            x:-200
+        },
+        visible: (custom: number) => ({
+            opacity: 1,
+            x:0,
+            transition: {delay: custom * 0.2}
+        })
+    }
+
+    const meImgAnimation = {
+        hidden:{
+            filter:"blur(100px)" ,
         },
         visible:{
-            x:0
+            filter: "blur(0px)",
+            transition: {duration: 2, delay: 1}
         }
     }
+
+    const quoteBlockAnimation = {
+        hidden: {
+            opacity:0,
+            y:100
+        },
+        visible:{
+            opacity:1,
+            y: 0,
+            transition:{delay: 1.5}
+        }
+    }
+
+    const projectCardsAnimation = {
+        hidden:{
+            opacity:0
+        },
+        visible:(custom: number) =>({
+            opacity:1,
+            transition: {delay: custom * 0.2}
+        })
+    }
+
+    const skillCardsX = {
+        hidden:(custom:number) => ({
+            opacity:0,
+            x:custom
+        }),
+        visible: {
+            opacity:1,
+            transition: {delay: 0.6},
+            x:0,
+        }
+    }
+
+    const skillCardsY = {
+        hidden:(custom:number) => ({
+            opacity:0,
+            y:custom
+        }),
+        visible: {
+            opacity:1,
+            transition: {delay: 0.6},
+            y:0,
+        }
+    }
+
+    const aboutMe = {
+        hidden:{
+
+        },
+        visible:{
+
+        }
+    }
+
     const dispatch = useAppDispatch()
 
     return (
@@ -32,31 +103,39 @@ const Home = () => {
             <section className="me">
                 <div className="container">
                     <div className="me__row">
-                        <motion.div
-                            className="me__info"
-                            initial={'hidden'}
-                            animate={'visible'}
-                            transition={{
-                                duration:1.5
-                            }}
-                            variants={meBlockVariants}
-                        >
-                            <p className="me__title">Артемий — <span className="me__title-span">front-end разработчик</span></p>
-                            <p className="me__subtitle">Он создает веб-сайты, где технологии сочетаются с творчеством.</p>
-                            <button onClick={()=> dispatch(openPopup())} type={'button'} className="purpleBtn me__btn">Свяжитесь со мной!!</button>
-                        </motion.div>
+                        <div className="me__info">
+                            <motion.p
+                                className="me__title"
+                                initial={'hidden'}
+                                whileInView={'visible'}
+                                custom={2}
+                                variants={meTextAnimation}
+                                viewport={{amount: 0.3, once:true}}
+                            >Артемий — <span className="me__title-span">front-end разработчик</span></motion.p>
+                            <motion.p
+                                className="me__subtitle"
+                                initial={'hidden'}
+                                whileInView={'visible'}
+                                custom={3.5}
+                                variants={meTextAnimation}
+                                viewport={{amount: 0.3, once:true}}
+                            >Он создает веб-сайты, где технологии сочетаются с творчеством.</motion.p>
+                            <motion.button
+                                onClick={()=> dispatch(openPopup())} type={'button'} className="purpleBtn me__btn"
+                                initial={'hidden'}
+                                whileInView={'visible'}
+                                custom={4}
+                                variants={meTextAnimation}
+                                viewport={{amount: 0.3, once:true}}
+                            >Свяжитесь со мной!!</motion.button>
+                        </div>
 
-                        <motion.div
-                            className="me__blockImg"
-                            initial={{
-                                x:1000,
-                        }}
-                            animate={{
-                                x:0,
-                        }}
-                            transition={{
-                                duration:1.5
-                            }}
+                        <motion.div className="me__blockImg"
+                                    initial={'hidden'}
+                                    whileInView={'visible'}
+                                    variants={meImgAnimation}
+                                    viewport={{amount: 0.3, once:true}}
+
                         >
                             <img src={human} alt="human" className="me__img"/>
                             <p className="me__portfolio">
@@ -66,18 +145,30 @@ const Home = () => {
                         </motion.div>
                     </div>
 
-                    <div className="me__quoteBlock">
+                    <motion.div
+                        className="me__quoteBlock"
+                        initial={'hidden'}
+                        whileInView={'visible'}
+                        viewport={{amount: 0.5, once:true}}
+                        variants={quoteBlockAnimation}
+                    >
                         <p className={'me__quoteBlock-quote'}>" Человек может быть гением или обладать всеми необходимыми навыками, но если он не верит в себя, он не будет выкладываться по полной. "</p>
                         <p className={'me__quoteBlock-name'}>- Марк Цукерберг</p>
-                    </div>
+                    </motion.div>
                 </div>
             </section>
             <section className="project">
                 <div className="container">
-                    <SectionTitle title={'проекты'}/>
+                    <SectionTitle  title={'проекты'}/>
                     <div className="project__row">
 
-                        <div className="project__card">
+                        <motion.div className="project__card"
+                             initial={'hidden'}
+                             whileInView={'visible'}
+                                    variants={projectCardsAnimation}
+                                    custom={2.5}
+                                    viewport={{amount: 0.5, once:true}}
+                        >
                             <img src={todoJs} alt="" className="projects__card-img"/>
                             <p className="projects__card-stack">Html Scss JavaScript Vanta</p>
                             <div className="projects__card-description">
@@ -86,10 +177,16 @@ const Home = () => {
 
                                 <Link target={'_blank'} to={'https://github.com/artyomvaleriyevich/todoJs'} className="projects__card-btn purpleBtn">{`Github <~>`}</Link>
                             </div>
-                        </div>
+                        </motion.div>
 
 
-                        <div className="project__card">
+                        <motion.div className="project__card"
+                             initial={'hidden'}
+                             whileInView={'visible'}
+                                    variants={projectCardsAnimation}
+                                    custom={3.5}
+                                    viewport={{amount: 0.5, once:true}}
+                        >
                             <img src={simple} alt="" className="projects__card-img"/>
                             <p className="projects__card-stack">Html Scss React Redux Redux-toolkit TypeScript Vite Axios db.json
                             json-server
@@ -100,9 +197,15 @@ const Home = () => {
 
                                 <Link target={'_blank'} to={'https://github.com/artyomvaleriyevich/simpleVite'} className="projects__card-btn purpleBtn">{`Github <~>`}</Link>
                             </div>
-                        </div>
+                        </motion.div>
 
-                        <div className="project__card">
+                        <motion.div className="project__card"
+                             initial={'hidden'}
+                             whileInView={'visible'}
+                                    variants={projectCardsAnimation}
+                                    custom={4.5}
+                                    viewport={{amount: 0.5, once:true}}
+                        >
                             <img src={food} alt="" className="projects__card-img"/>
                             <p className="projects__card-stack">Html Scss React Redux Redux-toolkit db.json Axios Swiper Toastify json-server</p>
                             <div className="projects__card-description">
@@ -111,7 +214,7 @@ const Home = () => {
 
                                 <Link target={'_blank'} to={'https://github.com/artyomvaleriyevich/Food'} className="projects__card-btn purpleBtn">{`Github <~>`}</Link>
                             </div>
-                        </div>
+                        </motion.div>
 
                     </div>
 
@@ -127,29 +230,60 @@ const Home = () => {
                         </div>
                         <div className="skill__row">
 
-                            <div className="skill__card">
+                            <motion.div
+                                className="skill__card"
+                                initial={'hidden'}
+                                whileInView={'visible'}
+                                variants={skillCardsX}
+                                custom={-100}
+                                viewport={{amount: 0.5, once:true}}
+                            >
                                 <h3 className="skill__card-title">Languages</h3>
                                 <p className="skill__card-subtitle">TypeScript JavaScript</p>
-                            </div>
+                            </motion.div>
 
-                            <div className="skill__card">
+                            <motion.div
+                                className="skill__card"
+                                initial={'hidden'}
+                                whileInView={'visible'}
+                                variants={skillCardsY}
+                                custom={-100}
+                            >
                                 <h3 className="skill__card-title">Other</h3>
                                 <p className="skill__card-subtitle">HTML CSS SCSS FlexBox</p>
-                            </div>
+                            </motion.div>
 
-                            <div className="skill__card">
+                            <motion.div
+                                className="skill__card"
+                                initial={'hidden'}
+                                whileInView={'visible'}
+                                variants={skillCardsX}
+                                custom={100}
+                            >
                                 <h3 className="skill__card-title">Tools</h3>
                                 <p className="skill__card-subtitle">Webstorm Figma Git GitHub Vite Material-UI BEM</p>
-                            </div>
-                            <div className="skill__card">
+                            </motion.div>
+                            <motion.div
+                                className="skill__card"
+                                initial={'hidden'}
+                                whileInView={'visible'}
+                                variants={skillCardsY}
+                                custom={100}
+                            >
                                 <h3 className="skill__card-title">Frameworks</h3>
                                 <p className="skill__card-subtitle">React</p>
-                            </div>
+                            </motion.div>
 
-                            <div className="skill__card">
+                            <motion.div
+                                className="skill__card"
+                                initial={'hidden'}
+                                whileInView={'visible'}
+                                variants={skillCardsY}
+                                custom={100}
+                            >
                                 <h3 className="skill__card-title">Library</h3>
                                 <p className="skill__card-subtitle">Redux Redux-Toolkit</p>
-                            </div>
+                            </motion.div>
 
 
                         </div>
@@ -161,7 +295,11 @@ const Home = () => {
                     <SectionTitle title={'Обо мне'}/>
                     <div className="aboutMe__row">
                        <div className="aboutMe__info">
-                           <p className="aboutMe__text">
+                           <motion.p
+                               className="aboutMe__text"
+                               initial={'hidden'}
+                               whileInView={'visible'}
+                           >
                                Привет, я Артём!
                                <br/>
                                <br/>
@@ -169,11 +307,11 @@ const Home = () => {
                                <br/>
                                <br/>
                                Я помогаю различным клиентам установить свое присутствие в Интернете. Всегда стараюсь узнавать о новейших технологиях и фреймворках.
-                           </p>
+                           </motion.p>
 
                            <Link onClick={()=> scroll.scrollToTop()} to={'/about'} className="purpleBtn aboutMe__btn">{`Читать дальше ->`}</Link>
                        </div>
-                        
+
                         <div className="aboutMe__picture">
                             <img src={imgHuman} alt="" className="aboutMe__img"/>
                         </div>

@@ -7,9 +7,21 @@ import {MdCloseFullscreen} from "react-icons/md";
 import {RootState, useAppDispatch} from "../../../store";
 import {closeBurger, openBurger} from "../../../redux/burgerSlice";
 import {useSelector} from "react-redux";
-
+import {motion} from "framer-motion";
 
 export const Header = () => {
+
+    const headerAnimation = {
+        hidden:{
+            y:200,
+            opacity:0,
+        },
+        visible:{
+            y: 0,
+            opacity:1,
+            transition:{duration: 2}
+        }
+    }
 
     const {status} = useSelector((s:RootState) => s.burger)
     const dispatch = useAppDispatch()
@@ -17,7 +29,13 @@ export const Header = () => {
     return (
         <header className="header">
             <div className="container">
-                <div className="header__row">
+                <motion.div
+                    className="header__row"
+                    initial={'hidden'}
+                    animate={'visible'}
+                    variants={headerAnimation}
+
+                >
                     <p className={'header__title'}>
                         <img className={'header__img'} src={logo} alt="headerLogo"/>
                         Артемий
@@ -35,7 +53,7 @@ export const Header = () => {
                     <div className="burger" onClick={()=> dispatch(openBurger())}>
                         <span className="burger__svg"><FaHamburger/></span>
                     </div>
-                </div>
+                </motion.div>
             </div>
 
             <div className="header__menu">
